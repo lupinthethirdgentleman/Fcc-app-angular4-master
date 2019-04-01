@@ -1,0 +1,22 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div class='block-parent no-availability'>
+  <div class='confirm-header'>
+    <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+  </div>
+  <div class='block-center'>
+    <p class='text-center'><img src='assets/images/flower.svg' /></p>
+    <div class='text-center title confirm-title'>
+      {{date}}<br />{{seats}} {{ 'GUESTS' | translate }} <img src='assets/images/dot.svg' class='title-dot' /> {{time}}
+    </div>
+    <p class='text-big text-center confirm-description'>{{ 'NO_AVAILABILITY_TEXT' | translate }}</p>
+  </div>
+  <div class='footer-block'>
+    <div class="grey-pattern">
+      <button class="btn" (click)="goToJoin()">
+        <span class="btn-corner-left"></span>
+        <span class="btn-corner-right"></span>
+        {{ 'JOIN_WAITING_LIST' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

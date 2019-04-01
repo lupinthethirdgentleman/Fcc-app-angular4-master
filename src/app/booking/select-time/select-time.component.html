@@ -1,0 +1,32 @@
+<div *ngIf="!isLoad" class="loading-spinner"></div>
+<div *ngIf='isLoad' class="booking block-parent">
+    <div class="header-block">
+        <p class="timer text-center">{{ countDown | formatTimer }}</p>
+        <div class="header-row">
+        <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+        <p class="title text-center">{{ 'STEP2' | translate }}</p>
+        <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+        </div>
+    </div>
+    <div class="block-center">
+        <div *ngFor='let shift of shifts; let i=index;'>
+            <h1 class='divider-part subtitle'>{{ shift.name }}</h1>
+            <div class='dinner-block'>
+                <div *ngFor="let time_slot of shift['time_slots']; let j=index;" class='time-slot-container'>
+                    <input type='radio' name='timeSlot' [checked]="shift.id === shift_id && time_slot === time" 
+                   (change)="selectedTimeSlot(i, j)"/>
+                    <label class="time-slot">{{time_slot | formatTimerHHMM}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-block">
+        <div class="grey-pattern">
+            <button class="btn" (click)="goToNext()">
+            <span class="btn-corner-left"></span>
+            <span class="btn-corner-right"></span>
+            {{ 'NEXT' | translate }}
+            </button>
+        </div>
+    </div>   
+</div>

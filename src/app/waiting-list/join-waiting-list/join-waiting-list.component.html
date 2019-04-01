@@ -1,0 +1,27 @@
+<div class='join block-parent'>
+  <div class="header-block">
+    <div class="header-row">
+      <a routerLink="/no-availability" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center">{{ 'JOIN_WAITING_LIST' | translate }}</p>
+    </div>
+  </div>
+  <div class='form mg-b-18'>
+    <input type="text" class="form-field mg-b-18" placeholder="{{ 'NAME' | translate }}" value="Christian Mason" />
+    <input type="text" class="form-field mg-b-18" placeholder="{{ 'EMAIL' | translate }}" value="thegreatmason@gmail.com" />
+    <input type="text" class="form-field mg-b-18 disabled" placeholder="{{ 'PHONE' | translate }}" />
+    <textarea class='form-field disabled mg-b-18' placeholder="{{ 'SPECIAL_REQUESTS' | translate }}"></textarea>
+    <div class='check-terms'>
+      <input class='check-terms-input' type='checkbox' />
+      <label class="check-terms-label text-small">{{ 'TERMS_TEXT' | translate }} <br><a class='link' href='/'>{{ 'TERMS_LINK' | translate }}</a></label>
+    </div>
+  </div>
+  <div class='footer-block'>
+    <div class="grey-pattern">
+      <button class="btn" routerLink='/confirm' [queryParams]="{isWaiting:true}">
+        <span class="btn-corner-left"></span>
+        <span class="btn-corner-right"></span>
+        {{ 'CONFIRM_WAITING_LIST' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

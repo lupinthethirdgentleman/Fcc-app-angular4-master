@@ -1,0 +1,51 @@
+@import "../../node_modules/compass-mixins/lib/compass";
+
+@mixin font-style($family: false, $size: false, $colour: false, $weight: false, $lh: false) {
+    @if $family { font-family: $family; }
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin button-corner($cornerUrl: true) {
+  position: absolute;
+  background: $background $cornerUrl;
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
+// Colors
+
+$darkBlue: #243958;
+$brown1: #b1884A;
+$brown2: #c49650;
+$white: #ffffff;
+$black: #000000;
+$red: #c24040;
+$azure: rgba(129, 203, 201, 0.1);
+$grey: rgba(0,0,0,0.3);
+$darkGrey: #F1EFED;
+$lightBlue: rgba(36,57,88, 0.05);
+$blue: rgba(36,57,88, 0.3);
+$lightBlue1: #f4f5f6;
+$background: #fcf9f6;
+
+// Other
+$borderWidth: 2px;
+$guestNumberSize: 60px;
+$btnHeight: 54px;
+$mainContainerWidth: 480px;
+$mainContainerPadding: 41px;
+$mainContainerPaddingLeft: 50px;
+$mainContainerPaddingRight: 32px;
+
+// Fonts
+
+$fontArgent: 'Argent CF';
+$fontColfax: Colfax;
+
+$light: 300;
+$medium: 500;
+$bold: 700;

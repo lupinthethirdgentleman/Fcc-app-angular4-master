@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu" transform="translate(-1354.000000, -142.000000)">
+            <g transform="translate(980.000000, 0.000000)" id="Profile">
+                <g transform="translate(0.000000, 130.000000)">
+                    <g id="Edit" transform="translate(374.000000, 12.000000)">
+                        <circle id="Oval-2" stroke="#243958" stroke-width="2" cx="12" cy="12" r="11"></circle>
+                        <path d="M7,14.916956 L7,17 L9.08304402,17 L15.2266352,10.8564088 L13.1435912,8.77336481 L7,14.916956 L7,14.916956 Z M16.8375226,9.24552146 C17.0541591,9.02888488 17.0541591,8.67893348 16.8375226,8.4622969 L15.5377031,7.16247743 C15.3210665,6.94584086 14.9711151,6.94584086 14.7544785,7.16247743 L13.7379531,8.17900292 L15.8209971,10.2620469 L16.8375226,9.24552146 L16.8375226,9.24552146 Z" id="Icon" fill="#243958"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

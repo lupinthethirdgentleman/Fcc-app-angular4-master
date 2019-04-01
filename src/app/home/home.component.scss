@@ -1,0 +1,22 @@
+.home {
+  .title-light {
+    line-height: 1.3;
+    padding: 31px 50px;
+  }
+  .btn {
+    max-width: 184px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    .title-light {
+      padding: 35px 30px 28px;
+    }
+    .logo {
+      width: 171px;
+      position: relative;
+      top: 8px;
+    }
+  }
+}

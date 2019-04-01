@@ -1,0 +1,68 @@
+@import "../../app.variable";
+
+.no-availability {
+  height: calc(100% - 19px);
+
+  .block-center {
+    top: 43.5%;
+  }
+}
+.confirm {
+  position: relative;
+
+  &-header {
+    margin-top: 28px;
+  }
+  &-title {
+    line-height: 1.5;
+    margin-top: 16px;
+  }
+  &-description {
+    max-width: 300px;
+    margin: 27px auto 0;
+    line-height: 1.4;
+  }
+}
+
+.footer-block {
+    position: absolute;
+    bottom: 8px;
+    left: -33px;
+    right: -33px;
+    width: calc(100% + 66px);
+
+    .grey-pattern {
+      padding: 28px 33px;
+      background: url(/assets/images/grey-pattern.svg) repeat;
+    }
+}
+
+@media (max-width: 767px) {
+  .no-availability {
+    .block-center {
+      top: 43.5%;
+    }
+  }
+  .confirm-header {
+    margin-top: 5px;
+    margin-left: 4px;
+  }
+  .confirm-title {
+    line-height: 1.4;
+    margin-top: 13px;
+  }
+  .confirm-description {
+    max-width: 267px;
+    margin: 22px auto 0;
+    line-height: 1.5;
+  }
+  .footer-block {
+    bottom: -43px;
+    left: -18px;
+    right: -18px;
+    width: calc(100% + 36px);
+    .grey-pattern {
+      padding: 22px 22px 26px;
+    }
+  }
+}

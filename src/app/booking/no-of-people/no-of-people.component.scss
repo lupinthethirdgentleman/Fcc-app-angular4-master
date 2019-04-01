@@ -1,0 +1,35 @@
+.no-people-block {
+    max-width: 324px;
+    margin: 0 auto;
+
+    & ~ p {
+      clear: both;
+      max-width: 265px;
+      margin: 11px auto 0;
+      line-height: 1.4;
+    }
+}
+
+.seats-available--icon {
+    background: url(/assets/images/icon-seats.svg) no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    right: 4px; 
+}
+
+@media (max-width: 767px) {
+  .no-people-block {
+    max-width: 261px;
+    margin: 83px auto -4px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 545px) {
+  .no-people-block {
+    margin: 35px auto -4px;
+  }
+}

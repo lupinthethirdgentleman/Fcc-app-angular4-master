@@ -1,0 +1,68 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div class="block-parent account">
+  <div class="header-block">
+    <div class="header-row">
+      <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center">{{ 'EDIT_PROFILE' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- <div class='form'>
+    <input type="text" class="form-field mg-b-18" placeholder="{{ 'NAME' | translate }}" [(ngModel)]="name" />
+    <input type="text" class="form-field mg-b-18" placeholder="{{ 'EMAIL' | translate }}" [(ngModel)]="email" />
+    <input type="text" class="form-field mg-b-18" placeholder="{{ 'PHONE' | translate }}" [(ngModel)]="phone" />
+  </div> -->
+  <form #myForm="ngForm" class='form'>
+        <input type="text" class="form-field mg-b-18" [(ngModel)]="name" 
+        placeholder="{{ 'NAME' | translate }}" value="" name="name" 
+        #nameVar="ngModel"
+        required/>
+        <div class="md-errors-spacer" [hidden]="nameVar.valid || nameVar.untouched">
+            <p class="text-medium mg-b-18" *ngIf="nameVar.errors && nameVar.errors.required">
+                Name is required
+            </p>
+        </div>
+        <input type="text" class="form-field mg-b-18"
+        #emailVar="ngModel"
+        [(ngModel)]="email"
+        required
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        placeholder="{{ 'EMAIL' | translate }}" value="" 
+        name="email"/>
+
+        <div class="md-errors-spacer" [hidden]="emailVar.valid || emailVar.untouched">
+            <p class="text-medium mg-b-18" *ngIf="emailVar.errors && emailVar.errors.required">
+                Email is required
+            </p>
+            <p class="text-medium mg-b-18" *ngIf="emailVar.errors && emailVar.errors.pattern">
+                Email is invalid
+            </p>
+        </div>
+        <div class="intl-phone form-field mg-b-18">
+            <int-phone-prefix [(ngModel)]="phone" #phoneVar="ngModel" name="phone" required></int-phone-prefix>            
+        </div>
+        <div class="md-errors-spacer" [hidden]="phoneVar.valid || phoneVar.untouched">
+            <p class="text-medium mg-b-18" *ngIf="phoneVar.errors && phoneVar.errors.required">
+                Phone is required
+            </p>
+        </div>
+        <div class="md-errors-spacer" [hidden]="!errors">
+            <p class="text-medium mg-b-18">
+                {{errors}}
+            </p>
+        </div>
+        <p class="text-medium mg-b-18" [hidden]="!success">
+            {{success}}
+        </p>
+    </form>
+    <div class="footer-block" >
+        <div class="grey-pattern">
+        <button [disabled]="!myForm.form.valid || showLoading" class="btn" (click)="updateUser()">
+            <span class="btn-corner-left"></span>
+            <span class="btn-corner-right"></span>
+            {{ 'SAVE' | translate }}
+        </button>
+        </div>
+    </div>
+
+</div>

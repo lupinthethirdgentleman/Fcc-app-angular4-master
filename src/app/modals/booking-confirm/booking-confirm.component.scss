@@ -1,0 +1,62 @@
+@import "../../app.variable";
+
+.confirm {
+  position: relative;
+  margin: 0 -33px;
+  border: $borderWidth solid $brown2;
+
+  &-header {
+    margin-top: 35px;
+  }
+  &-title {
+    line-height: 1.5;
+    margin-top: 16px;
+  }
+  &-description {
+    max-width: 300px;
+    margin: 23px auto 0;
+    line-height: 1.4;
+  }
+  &-footer {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .patern-big .pattern {
+    padding: 25px;
+  }
+  .patern-big .container {
+    padding: 10px;
+    height: calc(100vh - 50px);
+  }
+  .patern-big .confirm {
+    margin: 0;
+  }
+  .patern-big .main-block {
+    height: calc(100vh - 77px);
+  }
+  .confirm-header {
+    margin-top: 26px;
+  }
+  .confirm-footer {
+    bottom: 25px;
+  }
+  .confirm-title {
+    line-height: 1.4;
+    margin-top: 13px;
+  }
+  .confirm-description {
+    max-width: 255px;
+    margin: 22px auto 0;
+    line-height: 1.4;
+  }
+}

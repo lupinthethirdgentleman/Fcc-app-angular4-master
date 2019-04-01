@@ -1,0 +1,18 @@
+<div class='confirm block-parent'>
+    <span class='btn-corner-left'></span>
+    <span class='btn-corner-right'></span>
+    <div class='confirm-header'>
+        <h3 class='title text-center'>{{ 'THANK_YOU' | translate }}!</h3>
+    </div>
+    <div class='block-center'>
+        <p class='text-center'><img src='assets/images/flower.svg' /></p>
+        <div class='text-center title confirm-title'>
+        {{date}}<br />{{seats}} {{ 'GUESTS' | translate }} <img src='assets/images/dot.svg' class='title-dot' /> {{time}}
+        </div>
+        <p *ngIf='isWaiting' class='text-big text-center confirm-description'>{{ 'WAITING_LIST_CONFIRMATION' | translate }}</p>
+        <p *ngIf='!isWaiting' class='text-big text-center confirm-description'>{{ 'CONFIRMATION_TEXT' | translate }}</p>
+    </div>
+    <div class='confirm-footer'>
+        <a routerLink='/' class='text-big grey'>{{ 'BACK_TO_HOME' | translate }}</a>
+    </div>
+</div>

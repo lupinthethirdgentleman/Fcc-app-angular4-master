@@ -1,0 +1,41 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div *ngIf='isLoad' class="booking block-parent">
+  <div class="header-block">
+    <p class="timer text-center">{{this.countDown | formatTimer}}</p>
+    <div class="header-row">
+      <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center">{{ 'STEP3' | translate }}</p>
+      <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+    </div>
+  </div>
+  <div class="block-center">
+    <div class='no-people-block'>
+      <div *ngFor="let person_cnt of persons; let i=index;" class='guest-number-container'>
+        <input type='radio' name='noOfPeople' (change)="selectedPerson(i)" [checked]='person_cnt === person'/>
+        <label class="guest-number">{{person_cnt}}</label>
+      </div>
+    </div>
+    <p *ngIf='person !== 0' class='text text-center'>
+        <span class="seats-available--icon"></span>
+        {{tables ? tables : "No"}} {{ 'SEATS_AVAILABLE' | translate }}
+    </p>
+    <p class='text text-center'>
+        {{ 'NO_PEOPLE_HELP_TEXT' | translate }} <a href='/' class='link'>{{ 'NO_PEOPLE_HELP_LINK' | translate }}</a>
+    </p>
+    <p *ngIf='person === 0' class='text text-center'>&nbsp;</p>
+  </div>
+  <div class="footer-block">
+      <div class="grey-pattern">
+        <button *ngIf='!person || ( person && tables )' [disabled]="!person || showLoading" class="btn" (click)="goToNext()">
+          <span class="btn-corner-left"></span>
+          <span class="btn-corner-right"></span>
+          {{ 'NEXT' | translate }}
+        </button>
+        <button *ngIf='!tables && person' [disabled]="!person || showLoading" class="btn" (click)="goToJoin()">
+          <span class="btn-corner-left"></span>
+          <span class="btn-corner-right"></span>
+          {{ 'JOIN_WAITING_LIST' | translate }}
+        </button>
+      </div>
+  </div>   
+</div>

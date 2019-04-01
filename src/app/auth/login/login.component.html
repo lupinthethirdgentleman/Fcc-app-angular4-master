@@ -1,0 +1,81 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div *ngIf='!isWechat && !isPhone' class='block-parent menu'>
+    <div class='confirm-header'>
+        <a (click)="goBack()"><img src='assets/images/close.svg' /></a>
+    </div>
+    <div class='block-center'>
+        <div class='register-selection'>
+        <button (click)="goToWechat()" class="btn-wechat">{{ 'LOGIN_WE_CHAT' | translate }}</button>
+        <button (click)="goToPhoneLogin()" class="btn-light">{{ 'LOGIN_PHONE' | translate }}</button>
+        <p class='text text-center'>{{ 'NOT_A_MEMBER' | translate }}
+            <a (click)="goSignup()" class='link'>{{ 'SIGN_UP_LINK' | translate }}</a>
+        </p>
+        </div>
+    </div>
+</div>
+
+<div class='login-wechat block-parent' *ngIf='isWechat || isPhone'>
+    <div class="header-block">
+        <p [style.visibility]="countDown ? 'visible' : 'hidden'" class="timer text-center">{{countDown | formatTimer}}</p>
+        <div class="header-row">
+            <a (click)="isWechat = false; isPhone = false" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+            <p class="title text-center">{{ 'LOGIN' | translate }}</p>
+        </div>
+    </div>
+    <form #myForm="ngForm" class='form'>
+        <input [hidden]='!isWechat' type="text" class="form-field mg-b-18" [(ngModel)]="name" 
+        placeholder="{{ 'NAME' | translate }}" value="Christian Mason" name="name" 
+        #nameVar="ngModel"
+        [required]='isWechat'/>
+        <div *ngIf='isWechat&&nameVar' class="md-errors-spacer" [hidden]="nameVar.valid || nameVar.untouched">
+            <p class="text-medium mg-b-18" *ngIf="nameVar&&nameVar.errors && nameVar.errors.required">
+                Name is required
+            </p>
+        </div>
+        <input [hidden]='!isWechat' type="text" class="form-field  mg-b-18"
+        #emailVar="ngModel"
+        [(ngModel)]="email"
+        [required]='isWechat'
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        placeholder="{{ 'EMAIL' | translate }}" value="thegreatmason@gmail.com" 
+        name="email"/>
+
+        <div *ngIf='isWechat && emailVar' class="md-errors-spacer" [hidden]="emailVar.valid || emailVar.untouched">
+            <p class="text-medium mg-b-18" *ngIf="emailVar.errors && emailVar.errors.required">
+                Email is required
+            </p>
+            <p class="text-medium mg-b-18" *ngIf="emailVar.errors && emailVar.errors.pattern">
+                Email is invalid
+            </p>
+        </div>
+
+        <div class="intl-phone form-field mg-b-18">
+            <int-phone-prefix [(ngModel)]="phone" #phoneVar="ngModel" name="phone" required></int-phone-prefix>            
+        </div>
+        <div>
+            <p [hidden]="!phoneVar.valid || !smsCodeExpired" class='text-medium mg-b-18 send-link' (click)="sendSMSCode()">{{ 'SMS_NOTIFICATION' | translate }}</p>
+            <p [hidden]="smsCodeExpired" class='text-medium mg-b-18 sms-timer'>{{countDownForSms}}{{ 'SECOND_UNIT' | translate }}</p>        
+            <div class="md-errors-spacer" [hidden]="phoneVar.valid || phoneVar.untouched">
+                <p class="text-medium mg-b-18">
+                    Phone is required
+                </p>
+            </div>
+            <div class="md-errors-spacer" [hidden]="!errors">
+                <p class="text-medium mg-b-18">
+                    {{errors}}
+                </p>
+            </div>
+            <input type="text"  [(ngModel)]="code" class="form-field mg-b-18 disabled" 
+            placeholder="{{ 'VERIFICATION_CODE' | translate }}" name="code" required/>
+        </div>
+    </form>
+    <div class="footer-block">
+        <div class="grey-pattern">
+            <button [disabled]="!myForm.form.valid || showLoading" class="btn" (click)="login()">
+                <span class="btn-corner-left"></span>
+                <span class="btn-corner-right"></span>
+                {{ 'VERIFY_TO_LOGIN' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div *ngIf="!isLoad" class="loading-spinner"></div>
+<div *ngIf='isLoad' class="booking block-parent">
+  <div class="header-block">
+    <p class="timer text-center">{{countDown | formatTimer}}</p>
+    <div class="header-row">
+      <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center"><img src='assets/images/flower.svg' /></p>      
+      <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+    </div>
+  </div>
+  <div class='booking-overview'>
+    <div class='text-center title'>
+      {{date}}<br /> {{seats}} {{ 'GUESTS' | translate }} <img src='assets/images/dot.svg' class='title-dot' />{{time}}
+    </div>
+    <hr class="divider-full" />
+    <!-- <app-register *ngIf='!isLoggedIn'></app-register> -->
+    <div class='booking-overview-logged'>
+      <div class='booking-overview-logged-title mg-b-18'>
+        <span class='text-small medium'>{{ 'WELCOME_BACK' | translate }},</span>
+        <p class='text-big'>{{name}}</p>
+      </div>
+      <textarea class='form-field disabled mg-b-18' placeholder="{{ 'SPECIAL_REQUESTS' | translate }}" [(ngModel)]="note"></textarea>
+    </div>
+  </div>
+  <div class="footer-block">
+      <div class="grey-pattern">
+        <button class="btn" (click)="goToNext()">
+          <span class="btn-corner-left"></span>
+          <span class="btn-corner-right"></span>
+          {{ 'PROCEED_TO_PAYMENT' | translate }}
+        </button>
+      </div>
+  </div>   
+</div>

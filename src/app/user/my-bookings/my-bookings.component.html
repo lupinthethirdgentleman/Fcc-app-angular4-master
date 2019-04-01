@@ -1,0 +1,32 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div class="block-parent my-bookings">
+    <div class="header-block">
+        <div class="header-row">
+        <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+        <p class="title text-center">{{ 'MY_BOOKINGS' | translate }}</p>
+        </div>
+    </div>
+
+    <div class="my-bookings-subheader text-center">
+        <a (click)="bookingTab = 0;" [ngClass]='{active : (bookingTab === 0)}' class='my-bookings-url'>{{ 'UPCOMING' | translate }}</a>
+        <img src='assets/images/dot.svg' class='title-dot' />
+        <a (click)="bookingTab = 1;" [ngClass]='{active : (bookingTab === 1)}' class='my-bookings-url'>{{ 'PREVIOUS' | translate }}</a>
+    </div>
+
+    <hr class='divider-full' />
+
+    <div *ngIf='bookingTab === 0' class='my-bookings-list'>
+        <div>
+            <div class='text-center booking-block mg-b-18' *ngFor="let book of upcomingBookings;">
+                {{book.date}}<br />{{book.number_of_people}} {{ 'GUESTS' | translate }} <img src='assets/images/dot.svg' class='title-dot' /> {{book.date + ' ' + book.time | date:'HH:mm a'}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf='bookingTab === 1' class='my-bookings-list'>
+        <div>
+            <div class='text-center booking-block mg-b-18' *ngFor="let book of previousBookings;">
+                {{book.date}}<br />{{book.number_of_people}} {{ 'GUESTS' | translate }} <img src='assets/images/dot.svg' class='title-dot' /> {{book.date + ' ' + book.time | date:'HH:mm a'}}
+            </div>
+        </div>
+    </div>
+</div>

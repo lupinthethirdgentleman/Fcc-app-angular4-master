@@ -1,0 +1,25 @@
+<div *ngIf="!isLoad" class="loading-spinner"></div>
+<div *ngIf='isLoad' class="booking block-parent">
+    <div class="header-block">
+      <p class="timer text-center">{{countDown | formatTimer}}</p>
+      <div class="header-row">
+        <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+        <p class="title text-center">{{ 'STEP1' | translate }}</p>
+        <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+      </div>
+    </div>
+    <div class="block-center">
+        <hr class="divider-full" />
+        <dp-day-calendar #dayPicker [(ngModel)]="selectedDate" [config]="config"></dp-day-calendar>
+        <hr class="divider-full" />
+    </div>
+    <div class="footer-block">
+        <div class="grey-pattern">
+          <button [disabled]="(!selectedDate || (isCurHoliday && selectedDate.isSame(currentDate)))" class="btn" (click)="goToNext()">
+            <span class="btn-corner-left"></span>
+            <span class="btn-corner-right"></span>
+            {{ 'NEXT' | translate }}
+          </button>
+        </div>
+    </div>   
+</div>

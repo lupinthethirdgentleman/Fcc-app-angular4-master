@@ -1,0 +1,82 @@
+@import "app.base";
+
+.pattern {
+  height: 100vh;
+  background: url(/assets/images/pattern.svg) repeat;
+  padding: 12px;
+  @include box-sizing(border-box);
+}
+
+.container {
+  background: $background;
+  padding: 18px;
+  @include box-sizing(border-box);
+  height: calc(100vh - 24px);
+
+  &-image {
+    height: calc(100vh - 60px);
+    background: url(/assets/images/image-desktop.png) no-repeat top center;
+    background-size: cover;
+    width: calc(100% - #{$mainContainerWidth});
+    float: left;
+  }
+}
+
+.main-block {
+  @include box-sizing(border-box);
+  width: $mainContainerWidth;
+  height: calc(100vh - 60px);
+  float: left;
+  position: relative;
+  padding: 0 $mainContainerPaddingRight 0 $mainContainerPaddingLeft;
+}
+
+@media (min-width: 768px) and (max-height: 750px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 545px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.loading-spinner
+{
+  width: calc(100%);
+  height: calc(100vh - 60px);
+  position: absolute;
+  z-index: 1000;
+  opacity: 0.9;
+  background: url(/assets/images/loading.gif) transparent no-repeat center center;
+  background-size: 60px 60px;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  .main-block {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    overflow: inherit;
+    padding: 0;
+  }
+  .pattern {
+    padding: 8px;
+  }
+  .container {
+    height: calc(100vh - 16px);
+  }
+  .loading-spinner{
+    width: 100%;
+    height: calc(100vh - 16px);
+  }
+}
+
+
+// @import "home/home.component";

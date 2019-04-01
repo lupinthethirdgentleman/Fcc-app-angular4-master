@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Payment" transform="translate(-999.000000, -544.000000)" fill="#243958">
+            <g transform="translate(947.000000, 0.000000)" id="Content">
+                <g transform="translate(33.000000, 122.000000)">
+                    <g id="Payment" transform="translate(0.000000, 188.000000)">
+                        <g id="4" transform="translate(0.000000, 216.000000)">
+                            <path d="M37.5853025,35.1941385 L39.195582,36.804418 L37.804418,38.195582 L19,19.391164 L20.391164,18 L22.586746,20.195582 L37.5289153,20.195582 C38.305582,20.195582 39.195582,21.029957 39.195582,21.7745294 L39.195582,33.6166346 C39.195582,34.3432467 38.3480007,35.1553813 37.5853025,35.1941385 Z M24.586746,22.195582 L26.586746,24.195582 L37.195582,24.195582 L37.195582,22.195582 L24.586746,22.195582 Z M29.586746,27.195582 L35.586746,33.195582 L37.195582,33.195582 L37.195582,27.195582 L29.586746,27.195582 Z M32.195582,35.195582 L20.8622487,35.195582 C20.085582,35.195582 19.195582,34.361207 19.195582,33.6166346 L19.195582,22.195582 L24.195582,27.195582 L21.195582,27.195582 L21.195582,33.195582 L30.195582,33.195582 L32.195582,35.195582 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

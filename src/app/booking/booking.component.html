@@ -1,0 +1,45 @@
+<div class="booking block-parent">
+  <div class="header-block">
+    <p class="timer text-center">04:59</p>
+    <div class="header-row">
+      <a routerLink="/" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p *ngIf='step != 4' class="title text-center">{{ 'STEP' + step | translate }}</p>
+      <p *ngIf='step == 4' class="title text-center"><img src='assets/images/flower.svg' /></p>
+      <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+    </div>
+  </div>
+
+  <div *ngIf='step < 4' class="block-center">
+    <app-select-date *ngIf='step == 1'></app-select-date>
+    <app-select-time *ngIf='step == 2'></app-select-time>
+    <app-no-of-people *ngIf='step == 3'></app-no-of-people>
+  </div>
+
+  <!-- <app-booking-overview [isLoggedIn]='isLoggedIn' (onVotedBooking)="onVotedBooking($event)" *ngIf='step == 4'></app-booking-overview> -->
+  <app-booking-payment *ngIf='step == 5'></app-booking-payment>
+
+  <div class="footer-block" *ngIf='step != 4'>
+    <div class="grey-pattern">
+      <button class="btn" *ngIf='step < 4' (click)="goToNext()">
+        <span class="btn-corner-left"></span>
+        <span class="btn-corner-right"></span>
+        {{ 'NEXT' | translate }}
+      </button>
+      <button class="btn" *ngIf='step == 5' routerLink='/confirm'>
+        <span class="btn-corner-left"></span>
+        <span class="btn-corner-right"></span>
+        {{ 'MAKE_PAYMENT' | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="footer-block" *ngIf='step == 4 && isLoggedIn'>
+    <div class="grey-pattern">
+      <button class="btn" (click)="goToNext()">
+        <span class="btn-corner-left"></span>
+        <span class="btn-corner-right"></span>
+        {{ 'PROCEED_TO_PAYMENT' | translate }}
+      </button>
+    </div>
+  </div>
+
+</div>

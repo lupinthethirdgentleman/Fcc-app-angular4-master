@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Splash" transform="translate(-88.000000, -422.000000)" fill="#C49650">
+            <g id="Book-a-Table" transform="translate(59.000000, 341.000000)">
+                <g id="Button" transform="translate(29.000000, 81.000000)">
+                    <g id="Group-Copy-4">
+                        <rect id="Rectangle-19" x="7" y="2" width="2" height="11"></rect>
+                        <rect id="Rectangle-19-Copy" x="11" y="0" width="2" height="9"></rect>
+                        <rect id="Rectangle-20" x="0" y="11" width="9" height="2"></rect>
+                        <rect id="Rectangle-20-Copy" x="3" y="7" width="8" height="2"></rect>
+                        <path d="M2,2 L9,2 L9,9 L2,9 L2,2 Z M4,4 L4,7 L7,7 L7,4 L4,4 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

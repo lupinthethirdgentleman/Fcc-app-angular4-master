@@ -1,0 +1,24 @@
+<div class="block-parent language">
+  <div class="header-block">
+    <div class="header-row">
+      <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center">{{ 'LANGUAGE' | translate }}</p>
+    </div>
+  </div>
+
+  <div class='menu-block'>
+    <div class='menu-block-nav'>
+      <ul>
+        <li class='language-block'>
+          <input type='radio' name='language' (change)="changedLanguage(0)" [checked]="selectedLang === 0"/>
+          <label class='text-big'>English</label>
+        </li>
+        <li class='language-block'>
+          <input type='radio' name='language' (change)="changedLanguage(1)" [checked]="selectedLang === 1"/>
+          <label class='text-big'>中文</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

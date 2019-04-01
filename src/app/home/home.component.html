@@ -1,0 +1,12 @@
+<div class="block-parent home">
+  <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+  <div class="block-center">
+    <img src="assets/images/logo.svg" alt="Logo" class="logo" />
+    <p class="title-light">{{ 'HOME_TITLE' | translate }}</p>
+    <button class="btn" (click)="goToNext()">
+      <span class="btn-corner-left"></span>
+      <span class="btn-corner-right"></span>
+      {{ 'BTN_BOOK_TABLE' | translate }}
+    </button>
+  </div>
+</div>

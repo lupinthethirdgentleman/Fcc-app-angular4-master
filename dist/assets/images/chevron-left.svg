@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>bounds</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Select-Date" transform="translate(-985.000000, -281.000000)">
+            <g id="Date" transform="translate(947.000000, 0.000000)">
+                <g id="Date-Picker" transform="translate(33.000000, 237.000000)">
+                    <g id="Calendar" transform="translate(5.000000, 44.000000)">
+                        <g id="chevron-left">
+                            <rect id="bounds" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

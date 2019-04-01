@@ -1,0 +1,44 @@
+@import "../../booking/booking.component";
+@import "../menu/menu.component";
+
+.language {
+  .header-block .header-row {
+    margin-top: 19px;
+    margin-bottom: 31px;
+    overflow: hidden;
+  }
+
+  &-block {
+    position: relative;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      bottom: 0;
+      height: 39px;
+      opacity: 0;
+
+      &:checked + label:after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -2px;
+        width: 18px;
+        height: 17px;
+        background: url(/assets/images/icon-check.svg) no-repeat;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .language {
+    .header-block .header-row {
+      margin-top: 28px;
+      margin-bottom: 33px;
+    }
+  }
+}

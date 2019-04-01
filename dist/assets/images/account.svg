@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Account</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Logged-In" transform="translate(-1354.000000, -64.000000)" stroke="#243958" stroke-width="2">
+            <g id="Top-Nav" transform="translate(980.000000, 40.000000)">
+                <g id="Account" transform="translate(375.000000, 25.000000)">
+                    <path d="M22,11 C22,4.926 17.075,0 11,0 C4.925,0 0,4.926 0,11 C0,17.076 4.925,22 11,22 C17.075,22 22,17.076 22,11 Z" id="Stroke-1"></path>
+                    <polyline id="Stroke-3" points="19 18 19 18 13 15"></polyline>
+                    <path d="M9,15 L3,18" id="Stroke-5"></path>
+                    <path d="M12.999,15 C15.003,13.5865965 15,10.8221313 15,10.8221313 L14.997,7.60666277 C14.71,6.12507306 12.754,5 11,5 C9.24600002,5 7.29000003,6.12702124 7.00300003,7.60861095 L7.00000003,10.8240795 C7.00000003,10.8240795 6.99700003,13.5865965 9.00100002,15" id="Stroke-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+@import "../../booking/booking.component";
+
+.account {
+  .header-block .header-row {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .form {
+    margin-top: 48px;
+  }
+  .md-errors-spacer p {
+    color: $red;
+    }
+}
+
+@media (min-width: 768px) and (max-height: 750px) {
+  .account .form {
+    overflow: auto;
+    height: calc(100% - 213px);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .account {
+    .header-block .header-row {
+      margin-top: 27px;
+    }
+    .form {
+      margin-top: 42px;
+      padding: 0 4px;
+    }
+  }
+}
+
+@media (max-height: 390px) {
+  .account.block-parent {
+    overflow: auto;
+    height: calc(100% + 25px);
+  }
+  .account .footer-block {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .account .header-block {
+    margin: -18px 0 0;
+
+    .header-row .icon-back {
+      left: 0;
+    }
+  }
+}

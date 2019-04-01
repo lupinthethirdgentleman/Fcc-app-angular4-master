@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  height: 100%;
+}
+
+@import "app/app.variable";
+int-phone-prefix{
+    input {
+        @include font-style($family: $fontColfax, $size: 18px, $colour: $darkBlue);
+        background: $background;
+        border: none;
+        line-height: $btnHeight - 4px;
+        outline: none;
+        padding: 0 19px;
+      
+        &.disabled {
+          border: none;
+          background: $lightBlue;
+          line-height: $btnHeight;
+        }
+    }
+    button.dropbtn.btn {
+        background: none !important;
+    }
+    a.list-group-item {
+        padding: 0px 16px !important;
+    }
+    .flag {
+        background-image: url(/assets/images/flags_boi3c5.png) !important;
+    }
+}
+
+.intl-tel-input {
+    margin-bottom: 18px !important;
+    width: 100% !important;
+}
+
+@media (max-width: 767px) {
+    int-phone-prefix{
+        input { 
+            font-size: 16px;
+            width: 70%;
+        }
+    }
+}

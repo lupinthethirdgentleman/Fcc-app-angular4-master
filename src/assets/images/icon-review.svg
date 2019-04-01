@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Steps" transform="translate(-161.000000, -498.000000)" fill="#545359">
+            <g id="List" transform="translate(160.000000, 220.000000)">
+                <g id="5" transform="translate(0.000000, 262.000000)">
+                    <path d="M17,18 L12.82,18 C12.4,16.84 11.3,16 10,16 C8.7,16 7.6,16.84 7.18,18 L3,18 C1.9,18 1,18.9 1,20 L1,34 C1,35.1 1.9,36 3,36 L17,36 C18.1,36 19,35.1 19,34 L19,20 C19,18.9 18.1,18 17,18 L17,18 Z M10,18 C10.55,18 11,18.45 11,19 C11,19.55 10.55,20 10,20 C9.45,20 9,19.55 9,19 C9,18.45 9.45,18 10,18 L10,18 Z M8,32 L4,28 L5.41,26.59 L8,29.17 L14.59,22.58 L16,24 L8,32 L8,32 Z" id="Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

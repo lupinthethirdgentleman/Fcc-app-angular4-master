@@ -1,0 +1,35 @@
+<div class='block-parent menu'>
+  <div class='confirm-header'>
+    <a (click)="goBack()"><img src='assets/images/close.svg' /></a>
+  </div>
+  <div class='menu-block'>
+    <div class='menu-block-header'>
+      <div class='menu-block-left'>
+        <span class='text-small'>{{ 'GOOD_MORNING' | translate }},</span>
+        <h3 class='title'>{{name}}</h3>
+      </div>
+      <div class='menu-block-right'>
+        <a routerLink='/account'><img src='assets/images/edit.svg' alt='account' /></a>
+      </div>
+    </div>
+    <hr class='divider-full' />
+    <div class='menu-block-nav'>
+      <ul>
+        <li><a class='text-big' routerLink='/my-bookings'>{{ 'MY_BOOKINGS' | translate }}</a></li>
+        <li>
+          <span class='text-big'>{{ 'CONNECT_WE_CHAT' | translate }}</span>
+          <div class="switch">
+            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" checked type="checkbox">
+            <label for="cmn-toggle-1"></label>
+          </div>
+        </li>
+        <li><a class='text-big' routerLink='/language'>{{ 'LANGUAGE' | translate }}</a></li>
+        <li><a class='text-big' routerLink='/'>{{ 'CONTACT_US' | translate }}</a></li>
+        <li><a class='red text-big link' (click)='logout()'>{{ 'LOG_OUT' | translate }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='confirm-footer'>
+    <a routerLink='/' class='text grey'>{{ 'COPYRIGHT' | translate }}</a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@import "../../user/menu/menu.component";
+
+.register-wechat {
+  .header-block {
+    padding: 8px 0 49px;
+  }
+  .sms-timer {
+      text-align: right;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 750px) {
+  .register-wechat .form {
+    overflow: auto;
+    height: calc(100% - 213px);
+  }
+}
+
+@media (max-width: 767px) {
+  .register-wechat {
+    .header-block {
+        padding: 8px 0 42px;
+    }
+    .form {
+        padding: 0 4px;
+    }  
+  }
+}

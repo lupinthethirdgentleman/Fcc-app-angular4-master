@@ -1,0 +1,60 @@
+@import "../../app.variable";
+
+app-error {
+  .block-center {
+    top: 47%;
+  }
+  .block-parent {
+    overflow: hidden;
+  }
+}
+
+.confirm {
+  &-header {
+    margin-top: 28px;
+  }
+  &-title {
+    line-height: 1.5;
+    margin-top: 16px;
+  }
+  &-description {
+    max-width: 315px;
+    margin: 12px auto 0;
+    line-height: 1.5;
+  }
+  &-footer {
+    position: absolute;
+    bottom: 70px;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  app-error {
+    .block-center {
+      top: 48%;
+    }
+  }
+  .confirm-header {
+    margin-top: 5px;
+    margin-left: 4px;
+  }
+  .confirm-footer {
+    bottom: 14px;
+  }
+  .confirm-title {
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+  .confirm-description {
+    max-width: 280px;
+    margin: 12px auto 0;
+    line-height: 1.4;
+  }
+}

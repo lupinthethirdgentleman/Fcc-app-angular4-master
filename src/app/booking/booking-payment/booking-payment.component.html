@@ -1,0 +1,42 @@
+<div *ngIf="showLoading" class="loading-spinner"></div>
+<div *ngIf='isLoad' class="booking block-parent">
+  <div class="header-block">
+    <p class="timer text-center">{{countDown | formatTimer}}</p>
+    <div class="header-row">
+      <a (click)="goBack()" class='icon-back'><img src='assets/images/back-arrow.svg' /></a>
+      <p class="title text-center">{{ 'STEP5' | translate }}</p>
+      <a routerLink="/menu" class='icon-account'><img src='assets/images/account.svg' /></a>
+    </div>
+  </div> 
+  <div class='booking-payment'>
+    <p class='text-big booking-payment-title text-center'>{{ 'PAYMENT_TITLE' | translate }} {{price}} {{ 'PAYMENT_TITLE1' | translate }}</p>
+    <hr class="divider-full" />
+    <p class='text-big booking-payment-info'>
+      <span class='text-left'>{{seats}} {{ 'GUESTS' | translate }}</span>
+      <span class='text-right'>{{ 'RMB' | translate }} {{totalPrice}}</span>
+    </p>
+    <div class='payment-types'>
+      <div class='payment-type mg-b-18'>
+        <input type='radio' name='paymentType' [attr.checked]="price ? '' : null"/>
+        <label class="payment-type-label alipay text-big">{{ 'ALIPAY' | translate }}</label>
+      </div>
+      <div class='payment-type mg-b-18'>
+        <input type='radio' name='paymentType' />
+        <label class="payment-type-label wechat text-big">{{ 'WECHAT' | translate }}</label>
+      </div>
+      <div class='payment-type mg-b-18'>
+        <input type='radio' name='paymentType' [attr.checked]="price == 0 ? '' : null" />
+        <label class="payment-type-label card text-big">{{ 'CARD' | translate }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="footer-block">
+      <div class="grey-pattern">
+        <button [disabled]="showLoading" class="btn" (click)="goToNext()">
+          <span class="btn-corner-left"></span>
+          <span class="btn-corner-right"></span>
+          {{ 'MAKE_PAYMENT' | translate }}
+        </button>
+      </div>
+  </div>   
+</div>
